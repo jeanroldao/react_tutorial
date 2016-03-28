@@ -6,7 +6,7 @@ export default class Header extends React.Component {
 
   render() {
     return (
-      <Title />
+      <Title text={this.props.title} size="3" />
     );
   }
 }
