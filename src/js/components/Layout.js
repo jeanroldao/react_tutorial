@@ -10,11 +10,14 @@ export default class Layout extends React.Component {
     this.state = { name: "Jean" };
   }
   
+  changeTitle(name) {
+    this.setState({ name });
+  }
+  
   render() {
-
     return (
       <div>
-        <Header title={this.state.name} />
+        <Header changeTitle={this.changeTitle.bind(this)} title={this.state.name} />
         {this.state.name}
         <Footer />
       </div>
